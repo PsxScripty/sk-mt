@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leo Hagberg Skämt Generator</title>
+    <style>
+        body {
+            background-color: #2C4B90;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: white;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        #jokeBox {
+            width: 450px;
+            height: 40px;
+            background-color: white;
+            border-radius: 5px;
+            margin: 0 auto 20px auto;
+            padding: 10px;
+            color: black;
+            font-size: 1.1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #generateButton {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1.1rem;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #generateButton:hover {
+            background-color: darkred;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Leo Hagberg<br>Skämt Generator</h1>
+    <div id="jokeBox">Ditt skämt kommer här!</div>
+    <button id="generateButton">Skapa Skämt</button>
+</div>
+
+<script>
+    const jokes = [
+        "Varför kunde inte cykeln stå upp? Den var tvåhjulig.",
+        "Vad kallar man en alligator i en väst? En utredare.",
+        "Varför fungerar inte skelett som stand-up komiker? De har ingen kropp att relatera till.",
+        "Jag skulle berätta ett skämt om kemikalier, men det får ingen reaktion.",
+        "Vad är en dators favoritsnack? Microchips!",
+        "Vad kallar man en fisk utan ögon? Fsk.",
+        "Varför gick svampen till festen? För att han var en riktig svampkille!",
+        "Jag vet en massa ordvitsar om ost, men de är för cheddriga.",
+        "Vad säger den blyga saxen? Jag klipper dig senare.",
+        "Hur tar man sig ur en labyrint? Man följer trådarna.",
+        "Vad säger en fisk till sin vän? Vi håller simlinjen.",
+        "Vad sa den lata hängmattan? Jag vilar på min plats.",
+        "Vad gör man med en trasig penna? Man skriver ett nytt kapitel.",
+        "Varför gillar inte träd åska? De kan få en chock.",
+        "Varför är datorn dålig på att spela kort? Den kan aldrig bluffa.",
+        "Vad sa bananen till äpplet? Vi måste hålla ihop, skal mot skal.",
+        "Hur håller kossor kontakten? Genom moos-samtal.",
+        "Vad sa den glada ballongen? Jag är på toppen av världen!",
+        "Varför gillar spöken hissar? De ger en lyftande känsla.",
+        "Hur säger man hej till en blomma? Hej-blomma!",
+        "Vad kallar man en tupp som sjunger dåligt? En miss-tupp.",
+        "Hur tycker man att stjärnor ska uppföra sig? Lysande!",
+        "Hur får man en fisk att skratta? Man berättar en vitsig fisksaga."
+    ];
+
+    document.getElementById("generateButton").addEventListener("click", function() {
+        const randomJoke = jokes[Math.floor(Math.random() * jokes.length)];
+        document.getElementById("jokeBox").innerHTML = randomJoke;
+    });
+</script>
+
+</body>
+</html>
